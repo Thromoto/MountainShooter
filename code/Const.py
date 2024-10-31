@@ -116,10 +116,6 @@ MENU_OPTION = ('NEW GAME 1P',
                'SCORE',
                'EXIT')
 
-# N
-NAME = ('THIAGO HIDEO RAIZE OMOTO',
-               'RU: 4922299')
-
 # P
 PLAYER_KEY_UP = {'Player1': pygame.K_UP,
                  'Player2': pygame.K_w}
