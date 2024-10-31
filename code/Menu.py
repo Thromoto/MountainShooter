@@ -30,6 +30,7 @@ class Menu:
                 else:
                     self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
             pygame.display.flip()
+            
 
             # Check for all events
             for event in pygame.event.get():
