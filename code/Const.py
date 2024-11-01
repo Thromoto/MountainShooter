@@ -128,6 +128,8 @@ ENTITY_SCORE = {
     'Enemy2Shot': 0,
     'Enemy2': 150,
     'Enemy2Shot': 0,
+    'Enemy3': 200,
+    'Enemy3Shot': 0,
 }
 
 ENTITY_SHOT_DELAY = {
@@ -154,7 +156,7 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
+PLAYER_KEY_SHOOT = {'Player1': pygame.K_SPACE,
                     'Player2': pygame.K_LCTRL}
 
 # S
@@ -163,7 +165,7 @@ SPAWN_TIME = 4000
 # T
 TIMEOUT_STEP = 100  # 100ms
 TIMEOUT_LEVEL = 20000  # 20s
-TIMEOUT_LEVEL3 = 40000  # 20s
+
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
