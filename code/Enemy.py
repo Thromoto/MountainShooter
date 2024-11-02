@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from code.Const import ENTITY_SPEED, ENTITY_SHOT_DELAY
+from code.Const import ENTITY_SPEED, ENTITY_SHOT_DELAY, WIN_HEIGHT
 from code.EnemyShot import EnemyShot
 from code.Entity import Entity
 
@@ -10,8 +10,23 @@ class Enemy(Entity):
         super().__init__(name, position)
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
 
+        if self.name == 'Enemy3':
+            self.vertical_speed = ENTITY_SPEED[self.name]
+            self.direction = 1
+        else:
+            self.vertical_speed = 0
+
     def move(self):
         self.rect.centerx -= ENTITY_SPEED[self.name]
+
+        if self.name == 'Enemy3':
+            self.rect.centery += self.vertical_speed * self.direction
+            
+            if self.rect.bottom >= WIN_HEIGHT:
+                self.direction = -1
+            elif self.rect.top <= 0:
+                self.direction = 1
+                self.vertical_speed *= 2
 
     def shoot(self):
         self.shot_delay -= 1
